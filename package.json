@@ -37,7 +37,7 @@
   "dependencies": {
     "js-in-json": "^0.1.0",
     "static-params": "^0.1.3",
-    "ube": "^0.0.2",
+    "ube": "^0.1.0",
     "uhtml-ssr": "^0.7.1",
     "umeta": "^0.2.4"
   },

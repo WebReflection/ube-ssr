@@ -104,9 +104,9 @@ export default options => {
       if (current instanceof Tag) {
         const tagName = current.name;
         const prev = template[i - 1];
+        js.add(current.id);
         switch (prev[prev.length - 1]) {
           case '<':
-            js.add(current.id);
             current = asStatic(`${tagName} ${UBE}=${current.id}`);
             break;
           case '/':
