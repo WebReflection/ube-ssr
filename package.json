@@ -1,6 +1,6 @@
 {
   "name": "ube-ssr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An SSR, islands friendly, way to render ube components",
   "main": "./cjs/index.js",
   "scripts": {
