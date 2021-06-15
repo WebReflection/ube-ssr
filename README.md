@@ -36,7 +36,12 @@ const {
   //  if `incremental`, will flush after each component,
   //  otherwise will add a <script> with all needed content
   //  after rendering
-  flush: 'incremental'
+  flush: 'incremental',
+
+  // plus optional `module`:
+  // if `true`, all scripts are served as inline
+  // non-blocking type="module"
+  module: true
 });
 
 // define what µbe should be included, and what

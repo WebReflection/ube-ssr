@@ -4,7 +4,9 @@ const ube = require('../cjs');
 const {render, html, include, bootstrap} = ube({
   output: join(__dirname, 'cache.json'),
   root: __dirname,
-  flush: 'incremental'
+  flush: 'incremental',
+  module: true,
+  babel: false
 });
 
 const Div = include('comp/div.js').as('div');

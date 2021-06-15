@@ -49,6 +49,7 @@ module.exports = options => {
 
   const root = resolve(options.root);
   const incremental = options.flush === 'incremental';
+  const module = !!options.module;
 
   return {
     html: augment(uhtml),
@@ -56,8 +57,15 @@ module.exports = options => {
     render(where, what) {
       setup();
       const result = urender(where, what);
-      if (js.map.size)
-        urender(where, uhtml`<script>${new Hole(js.flush())}</script>`);
+      if (js.map.size) {
+        const content = new Hole(js.flush());
+        urender(
+          where,
+          module ?
+            uhtml`<script type=module>${content}</script>` :
+            uhtml`<script>${content}</script>`
+        );
+      }
       js = null;
       return result;
     },
@@ -112,7 +120,11 @@ module.exports = options => {
             break;
           case '/':
             current = incremental ?
-              asStatic(`${tagName}><script>${js.flush()}</script`) :
+              asStatic(
+                `${tagName}><script${
+                  module ? ' type=module' : ''
+                }>${js.flush()}</script`
+              ) :
               asStatic(tagName);
             break;
         }
