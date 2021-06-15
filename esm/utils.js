@@ -1,4 +1,4 @@
-export default ($, _) => {
+export const $ = ($, _) => {
   var
     i = 0,
     n = $(_),

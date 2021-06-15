@@ -75,7 +75,7 @@ export default options => {
         const uid = id++;
         modules[uid] = {
           input,
-          code: `function($){$.${MAIN}.default($,${uid})}`
+          code: `function($){$.${MAIN}.$($,${uid})}`
         };
         cache.set(input, new Tag(uid));
       }

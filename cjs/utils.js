@@ -1,5 +1,5 @@
 'use strict';
-module.exports = ($, _) => {
+const $ = ($, _) => {
   var
     i = 0,
     n = $(_),
@@ -21,3 +21,4 @@ module.exports = ($, _) => {
     }
   }
 };
+exports.$ = $;
