@@ -18,8 +18,6 @@ An SSR, islands friendly, way to render [µbe components](https://github.com/Web
 
 ```js
 import http from 'http';
-import {join} from 'path';
-
 import ube from 'ube-ssr';
 
 const {
@@ -65,6 +63,7 @@ await bootstrap(
 // http example
 http
   .createServer((req, res) => {
+    res.writeHead(200, {'content-type': 'text/html;charset=utf-8'});
     render(res, html`
       <!doctype html>
       <${Div}>Hello SSR 👋 </${Div}>
