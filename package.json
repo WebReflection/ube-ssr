@@ -23,7 +23,7 @@
   "devDependencies": {
     "ascjs": "^5.0.1",
     "c8": "^7.7.3",
-    "coveralls": "^3.1.0"
+    "coveralls": "^3.1.1"
   },
   "module": "./esm/index.js",
   "type": "module",
@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "js-in-json": "^0.2.1",
-    "static-params": "^0.1.3",
-    "ube": "^0.1.1",
+    "static-params": "^0.2.1",
+    "ube": "^0.2.1",
     "uhtml-ssr": "^0.7.1",
     "umeta": "^0.2.4"
   },

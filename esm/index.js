@@ -2,7 +2,7 @@ import {existsSync} from 'fs';
 import {join, resolve} from 'path';
 
 import {JSinJSON} from 'js-in-json';
-import {asParams, asStatic} from 'static-params';
+import {asParams, asStatic} from 'static-params/strict';
 import {Hole, render as urender, html as uhtml, svg as usvg} from 'uhtml-ssr';
 
 import umeta from 'umeta';

@@ -3,7 +3,7 @@ const {existsSync} = require('fs');
 const {join, resolve} = require('path');
 
 const {JSinJSON} = require('js-in-json');
-const {asParams, asStatic} = require('static-params');
+const {asParams, asStatic} = require('static-params/strict');
 const {Hole, render: urender, html: uhtml, svg: usvg} = require('uhtml-ssr');
 
 const umeta = (m => /* c8 ignore start */ m.__esModule ? m.default : m /* c8 ignore stop */)(require('umeta'));
